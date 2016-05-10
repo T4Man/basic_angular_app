@@ -12,7 +12,7 @@ gulp.task('webpack:dev', () => {
 });
 
 gulp.task('static:dev', () => {
-  gulp.src('app/**/*.html')
+  gulp.src(['app/**/*.html', 'app/**/*.css'])
     .pipe(gulp.dest('./build'));
 });
 

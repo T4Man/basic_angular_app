@@ -1,3 +1,15 @@
 h1 {
   color: red;
+  font-family: fantasy;
+}
+
+input {
+  color: red;
+  font-size: 20px;
+  border: solid 5px blue;
+}
+
+button {
+  font-size: 20px;
+  border: solid 5px yellow;
 }
