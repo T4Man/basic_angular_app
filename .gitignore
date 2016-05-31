@@ -1,8 +1,10 @@
 db/**
-build/**/**
+**/build
 node_modules
 node_modules/**
 **/node_modules
+**/**bundle.js
+**/**bundle.map
 # Compiled source #
 ###################
 *.com
