@@ -1,10 +1,22 @@
 # basic_angular_app
-## Code Fellows 401 Assignment
+## Code Fellows 401 Assignment - add protractor
 
-Setup an app server with Angular, Webpack and Express.
+This app requires:
+express,
+angular,
+gulp,
+gulp-eslint,
+gulp-protractor,
+webpack-stream
 
-Your app should be served by Express. It should contain bundled js files, your html files and a css file. Your app should load Angular properly.
+###After downloading the files use 'npm install' to install all dependencies.
 
-Stretch:
+###To run Protractor and linter tests
 
-Put a h1 in your app that updates when you enter text in an input field and clears when you hit a button called delete.
+1. Open a terminal window and type 'gulp'.
+2. When run ends, press Control C to exit the Selenium server.
+
+###To run Protractor test only
+
+1. Open a terminial window and type 'gulp test'.  
+2. When run ends, press Control C to exit the Selenium server.
