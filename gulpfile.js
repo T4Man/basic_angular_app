@@ -7,12 +7,6 @@ const cp = require('child_process');
 var children = [];
 const files = ['**/*.js', '!build/**', '!node_modules/**', '!test/**'];
 
-function killcp() {
-  children.forEach((child) => {
-    child.kill('SIGTERM');
-  });
-}
-
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
     .pipe(webpack( {
@@ -41,10 +35,9 @@ gulp.task('protractor:test', ['build:dev', 'startservers:test'], () => {
       configFile: 'test/e2e/config.js'
     }))
     .on('end', () => {
-      killcp();
-    })
-    .on('error', () => {
-      killcp();
+      children.forEach((child) => {
+        child.kill('SIGTERM');
+      });
     });
 });
 
